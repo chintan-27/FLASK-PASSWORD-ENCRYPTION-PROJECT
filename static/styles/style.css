@@ -1,33 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 input {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+    border: none;
+    background-color:#f1f1f1;
+    padding: 10px;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
   }
-  
+  input:focus{
+    outline: none;
+  }
   /* Style the submit button */
   input[type=submit] {
-    background-color: #4CAF50;
+    width: 50%;
+
+    background-color: #FFA263;
     color: white;
+    box-shadow: 3px 3px 5px #0002;
   }
-  
-  /* Style the container for inputs */
-  .container {
-    background-color: #f1f1f1;
-    padding: 20px;
-  }
-  
 
   #message {
-    display:none;
-    background: #f1f1f1;
     color: #000;
     position: relative;
     padding: 20px;
-    margin-top: 10px;
+    margin-left: 30px;
   }
   
   #message p {
@@ -47,7 +48,7 @@ input {
   
   /* Add a red text color and an "x" icon when the requirements are wrong */
   .invalid {
-    color: red;
+    color:#FF1111;
   }
   
   .invalid:before {
@@ -55,3 +56,62 @@ input {
     left: -35px;
     content: "✖";
   }
+
+  .container {
+    padding:0;
+    background-color: #fff;
+    box-shadow: 2px 3px 6px #0003;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: scale(0.8);
+    }
+    .imgb{
+      padding: 10px;
+    }
+  
+    .imgb img{
+    border-radius: 10px;
+    width: 100%;  
+    box-shadow: 2px 3px 6px #0003;
+    height:100%;
+    }
+
+    .last{
+      color: #00F;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .msg p{
+      background-color: #f004;
+      padding: 10px;
+      color: #f00;
+      border-radius: 3px;
+      border: 1px solid #f00;
+      margin-bottom:5px;
+    }
+
+    .new-btn:hover{
+      background:#FFA263;
+      width: 100%;
+      border: 10px solid #fff;
+      border-radius:5px;
+      padding:30px;
+      margin:30px;
+      box-shadow:4px 5px 6px #0003;
+      color:#fff;
+      text-decoration: none;
+    }
+
+    .new-btn{
+      border-radius:5px;
+      padding:30px;
+      margin:30px;
+      box-shadow:4px 5px 6px #0003;
+      color:#FFA263;
+      text-decoration: none;
+      background:#fff;
+      width: 100%;
+      border: 10px solid #FFA263;
+      transition:0.5s;
+    }

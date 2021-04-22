@@ -38,13 +38,16 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
         users = User.query.filter_by(username = username).all()
-        print()
-        val_hash = hashing.hash_value(password, salt='abcd')
-        if(val_hash == decrypt(users[0].password)):
-            return render_template('index.html',message = "Logged In")
+        if(len(users) > 0):
+            val_hash = hashing.hash_value(password, salt='abcd')
+            if(val_hash == decrypt(users[0].password)):
+                return render_template('index.html',message = "Logged In")
+            else:
+                return render_template('login.html',message = 'Check Your credentials')
+            return render_template('login.html')
         else:
             return render_template('login.html',message = 'Check Your credentials')
-        return render_template('login.html')
+            
     return render_template('login.html')
 
 @app.route('/logout')
